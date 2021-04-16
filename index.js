@@ -1,5 +1,5 @@
-const inquirer = require('inquirer)');
-const fs = reuiqre('fs');
+const inquirer = require('inquirer');
+const fs = require('fs');
 
 // prompt created to create questions for readme to produce. this prompt is pulling from the installed inquirer module that will generate the questions that have been written.
 inquirer.prompt(
