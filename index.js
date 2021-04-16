@@ -96,7 +96,17 @@ inquirer.prompt(
     #Contact
     #Github :${git}
     #email: ${email} `;
+    //readme function that creates readme and allows it to work, this is using fs
+    createNewfile(tilte,template);
 }
-//read me function that creates readme and allows it to work
-)
-
+);
+    // writefile function for readme
+    function createNewfile(fileName, data){
+        //fs write file
+    fs.writefile(`./${fileName.toLowerCase().split(' ').join('')}nd`,data,(err)=>{
+        if(err){
+            console.log(err)
+        }
+        console.log('Congratulations, Your README has been Created ');
+    })
+    }
