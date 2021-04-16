@@ -1,13 +1,15 @@
 const inquirer = require('inquirer)');
 const fs = reuiqre('fs');
 
-
+// prompt created to create questions for readme to produce. this prompt is pulling from the installed inquirer module that will generate the questions that have been written.
 inquirer.prompt(
     [
         {
+            //type indicates the type of question that will be produced, name indicates the category of the question. and message is the question the user is given to answer.
             type:'input',
             name: 'title',
             message: 'What is the Project title?',
+            //this function is to make sure the user has entered a response before being prompted to continue. A value must be enetered before continuing. if a value is entered the functionn will return true. if not the message will be produced.
             validate: (value)=>{ if(value){return true} else {return 'Please input a value to proceed'}},
         },
         {
@@ -63,6 +65,7 @@ inquirer.prompt(
 
 
     ]
+    //then statement to layout template for readme, which includes categories for questions that will be answered. this statement is including those categories in for the user to recognize what category of question they are answering.
 ).then(({
     title,
     installation,
@@ -72,7 +75,7 @@ inquirer.prompt(
     license,
     git,
     email
-
+//this is the template structure where the user will be prompted to put in a title, answer the questions and enter contact info.
 })=>{
     const template =`# ${title}
     *[Installation](#installation)
@@ -94,5 +97,6 @@ inquirer.prompt(
     #Github :${git}
     #email: ${email} `;
 }
+//read me function that creates readme and allows it to work
 )
 
