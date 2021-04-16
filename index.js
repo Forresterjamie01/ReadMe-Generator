@@ -97,7 +97,7 @@ inquirer.prompt(
     #Github :${git}
     #email: ${email} `;
     //readme function that creates readme and allows it to work, this is using fs
-    createNewfile(tilte,template);
+    createNewfile(title,template);
 }
 );
     // writefile function for readme
